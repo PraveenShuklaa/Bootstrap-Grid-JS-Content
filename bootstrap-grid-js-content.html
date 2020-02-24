@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Task</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .mar{
+            margin: 5px;
+        }
+        .mar-ml{
+            margin: 5px 5px 5px 10px;
+        }
+        .mar-mr{
+            margin: 5px 10px 5px 5px;
+        }
+        .main{
+            background-color: darkgrey;
+        }
+        .tab{
+            cursor: pointer;
+        }
+        .tab:hover{
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <!--------------------------header------------------------------>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!--------------------------header------------------------------>
+    <div class="container-fluid">
+        <div class="row main">
+            <div class="col bg-primary text-center tab mar-ml p-3" onClick="color(1)">
+                Paragraph text-color changes to primary
+            </div>
+            <div class="col bg-success text-center mar p-3 tab" onClick="color(2)">
+                Paragraph text-color changes to success
+            </div>
+            <div class="col bg-danger text-center mar tab p-3" onClick="color(3)">
+                Paragraph text-color changes to danger
+            </div>
+            <div class="col bg-warning text-center mar tab p-3" onClick="color(4)">
+                Paragraph text-color changes to warning
+            </div>
+            <div class="col bg-dark text-center mar p-3 tab" onClick="color(5)">
+                Paragraph text-color changes to dark
+            </div>
+            <div class="col text-center mar-mr p-3 tab" onClick="color(6)">
+                Paragraph text-color changes to default
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row my-5">
+                    <div class="col text-justify" id="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti, reiciendis alias velit accusamus modi enim adipisci dicta consectetur illo eveniet facere voluptatum soluta voluptas cupiditate aut fugit rem sapiente, ex, non harum iusto facilis! Ipsa velit iste dignissimos illum quos magni, neque ex culpa mollitia, itaque sequi, officia eum nulla qui quaerat nihil earum molestias sit ad esse dolores! Itaque deleniti optio possimus aperiam repellat a culpa saepe quibusdam eius, vel nobis atque. Cupiditate vel quisquam qui consequuntur. Harum corporis, illum sapiente, ipsum laudantium fugiat, maxime explicabo est quos maiores beatae deleniti saepe numquam fugit quod atque. Debitis, nulla.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function color(data){
+            switch(data){
+                case 1 : document.getElementById('para').style.color='#007bff';
+                break;
+                case 2 : document.getElementById('para').style.color='#28a745';
+                break;
+                case 3 : document.getElementById('para').style.color='#dc3545';
+                break;
+                case 4 : document.getElementById('para').style.color='#ffc107';
+                break;
+                case 5 : document.getElementById('para').style.color='#343a40';
+                break;
+                default : document.getElementById('para').style.color='#000';
+            }
+        }
+    </script>
+    <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+</body>
+</html>
